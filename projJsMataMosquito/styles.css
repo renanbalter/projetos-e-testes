@@ -1,0 +1,41 @@
+#gameForm {
+    border: 1px solid red;
+    text-align: center;
+    font-size: 65px;
+}
+
+#gameForm select {
+    padding: 3px 15px;
+    font-size: 20px;
+}
+
+#gameForm input {
+    font-size: 20px;
+    padding: 3px 45px;
+}
+
+.mosquito-img {
+    border: 1px solid red;
+    width: 195px;
+    height: 200px;
+    
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#game-body {
+    
+}
+
+#timer {
+    display: inline-block;
+    font-size: 30px;
+}
+#gametimer {
+    display: inline-block;
+    font-size: 30px;
+}

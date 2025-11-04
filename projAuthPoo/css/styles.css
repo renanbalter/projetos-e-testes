@@ -1,0 +1,147 @@
+#authform {
+    background-color: #121212;
+    color: white;
+}
+
+
+.navbar-item {
+    color: white;
+}
+
+.navbar-link {
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: yellow;
+  transition: 1s;
+}
+
+
+#search-form {
+    max-width: 530px;
+    text-align: center;
+    margin-left: 550px;
+}
+
+.main-content {
+    color: white;
+    background-color: #121212
+}
+
+#msg {
+    background-color: rgb(255, 217, 0);
+    text-align: center;
+    color: black;
+}
+
+.form-group label, .form-group input {
+    display: block;
+    width: 90%;
+
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+
+.auth-btn {
+    margin: 2px;
+    color:;
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    margin-left: 225px;
+    margin-top: 20px;
+}
+
+.profile-body {
+    color: white;
+}
+
+#profile-userinfo {
+    text-align: center;
+}
+
+.update-btn {
+    border: none;
+    margin-top: 20px;
+    background-color: orange;
+    width: 200px;
+}
+
+#post-btn {
+    border: none;
+    margin-top: 20px;
+    background-color: #666666;
+    border-radius: 8px;
+    padding: 8px 16px
+
+}
+
+#search-btn {
+    padding: 6px 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+.register-header {
+    margin-bottom: 25px;
+
+}
+
+.login-header {
+    margin-bottom: 17px;
+
+}
+
+.navbar-brand {
+}
+
+.profile-body {
+    background-color: #121212;
+}
+
+textarea.form-control {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#card-anchor {
+    text-decoration: none;
+    color: white;
+}
+
+.post-body {
+    background-color: #6d6d6d;
+}
+
+.post-image {
+    width: 80%;
+}
+
+.container-body {
+    background-color: #6d6d6d;
+}
+
+.viewpost-img {
+    width: 66%
+}
+
+.post:hover{
+    background-color: #343a40;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.require-auth-btn {
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+

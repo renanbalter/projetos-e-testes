@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="game-body">
+
+    <div id="game-status">
+    <div id="healthBar"></div>
+    <div id="timer">Timer:</div>
+    <div id="gametimer"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const difficulty = params.get('difficulty');
+        console.log(difficulty);
+
+        var health = 3;
+        healthbar = document.getElementById('healthBar');
+
+        function showCurrentHealth() {
+            healthbar.innerHTML = '';
+
+            for(var i = 1; i <= health; i++) {
+            const img = document.createElement('img');
+            img.src = 'imgs/coracao.png';
+            img.style.margin = '5px';
+            healthbar.appendChild(img);
+            }
+        }
+
+        showCurrentHealth(); // inicia contador de vida
+
+
+        // remove e atualiza vida
+        function minusHealth() {
+            health--;
+            showCurrentHealth();
+            console.log('Vida perdida.');
+            
+            if(health == 0) {
+                window.location.href = 'gameover.html';
+
+            }
+        }
+
+        function startTimer() {
+            if(difficulty == 'easy') {
+                var timer = 30;
+            } else if(difficulty == 'normal') {
+                var timer = 60;
+            } else {
+                var timer = 90;
+            }
+            gametimer = document.getElementById('gametimer');
+            
+            setInterval(() => {
+                timer--;
+                gametimer.innerHTML = ''
+                showTimer = document.createTextNode(timer);
+                gametimer.appendChild(showTimer);
+                console.log(timer);
+                    if(timer == 0 && health >= 1) {
+                    window.location.href = 'win.html';
+                    }
+            }, 1000);
+        }
+
+        startTimer();  //inicia o tempo para vitória
+
+        // lógica de posição aleatória
+        function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        function mosquitoSpawn() {
+            const oldMosquito = document.getElementById("mosquito");
+            if (oldMosquito) {
+            oldMosquito.remove();
+            minusHealth();
+            console.log(health);
+            }
+
+            const imgmosquito = document.createElement('img');
+            imgmosquito.src = 'imgs/mosquito.png';
+            imgmosquito.style.width = "100%";
+            imgmosquito.style.height = "100%";
+
+
+            const mosquitodiv = document.createElement('div');
+            mosquitodiv.onclick = function() {
+                mosquitodiv.remove();
+                console.log("mosquito clicado");
+            }
+            mosquitodiv.style.width = "70px";
+            mosquitodiv.style.height = "70px";
+            mosquitodiv.style.position = "absolute";
+            mosquitodiv.style.left = getRandomInt(1,1500) + "px";
+            mosquitodiv.style.top = getRandomInt(1,735) + "px";
+            mosquitodiv.id = "mosquito";
+
+
+            mosquitodiv.appendChild(imgmosquito);
+            document.body.appendChild(mosquitodiv);
+
+            
+
+            if (difficulty == 'easy') {
+                setTimeout(mosquitoSpawn, 3500);
+            } else if (difficulty == 'normal') {
+                setTimeout(mosquitoSpawn, 2500);
+            } else {
+                setTimeout(mosquitoSpawn, 1350);
+            }
+
+        }
+
+        mosquitoSpawn();
+
+
+        setTimeout
+
+        setTimeout(() => {
+            console.log("pinto");
+            
+        }, 1000);
+
+
+
+    </script>
+</body>
+</html>

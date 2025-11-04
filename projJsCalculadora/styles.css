@@ -1,0 +1,58 @@
+* {
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    width: 260px;
+    height: 380px;
+    background-color: rgb(61, 61, 61);
+    padding-left: 8px;
+    padding-top: 15px;
+}
+
+.row {
+    padding-top: 25px;
+
+}
+
+.calcbtn {
+    width: 48px;
+    height: 42px;
+    font-size: 23px;
+    margin-right: 12px;
+    color: white;
+    background: rgb(71, 71, 71);
+}
+
+.zerocalcbtn {
+    width: 111px;
+    height: 42px;
+    font-size: 23px;
+    margin-right: 12px;
+    color: white;
+    background: rgb(71, 71, 71);
+    
+}
+
+#calc {
+    height: 25px;
+    width: 233px;
+
+}
+
+.equalcalcbtn {
+    width: 52px;
+    height: 110px;
+    font-size: 23px;
+    margin-right: 12px;
+    position: absolute;
+    color: white;
+    background: rgb(71, 71, 71);
+}
